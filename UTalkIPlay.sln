@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{D137E30C-D447-45F6-A9CF-30B6BE77F421}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{11FB3642-869A-46ED-8A4C-97C220DE9874}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D137E30C-D447-45F6-A9CF-30B6BE77F421}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D137E30C-D447-45F6-A9CF-30B6BE77F421}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D137E30C-D447-45F6-A9CF-30B6BE77F421}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D137E30C-D447-45F6-A9CF-30B6BE77F421}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11FB3642-869A-46ED-8A4C-97C220DE9874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11FB3642-869A-46ED-8A4C-97C220DE9874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11FB3642-869A-46ED-8A4C-97C220DE9874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11FB3642-869A-46ED-8A4C-97C220DE9874}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
