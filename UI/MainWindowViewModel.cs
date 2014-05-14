@@ -58,7 +58,13 @@ namespace UI
         
         public void AddSongsAsync(string path)
         {
-            new System.Threading.Thread(() => { songRepo.AddSongsToDB(path); speechEngine.LoadGrammar(); }).Start();
+            new System.Threading.Thread(() => {
+                AddButtonText = "Adding...";
+                songRepo.AddSongsToDB(path);
+                AddButtonText = "Added";
+                speechEngine.LoadGrammar();
+                AddButtonText = "Add Songs";
+            }).Start();
         }
 
         public void ToggleListenMode()
