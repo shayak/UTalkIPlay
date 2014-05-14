@@ -90,22 +90,17 @@ namespace SpeechRecognition.DataAccess
                 try
                 {
                     var tag = TagLib.File.Create(song).Tag;
-                    if (!String.IsNullOrWhiteSpace(tag.Title))
-                        InsertSong(tag.Title, tag.FirstAlbumArtist ?? tag.FirstPerformer, tag.Album, song);
+
+                    var title = !String.IsNullOrWhiteSpace(tag.Title) ? tag.Title : processFileName(song);
+                    
+                    if (!String.IsNullOrWhiteSpace(title))
+                        InsertSong(title, tag.FirstAlbumArtist ?? tag.FirstPerformer, tag.Album, song);
                 }
                 catch (TagLib.CorruptFileException ex)
                 {
                     Console.WriteLine(song + ex.Message);
                 }
             }
-        }
-
-        /*
-        public string[] getSongNames(string path)
-        {
-            string[] files = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories).Where(x => x.EndsWith(".mp3") || x.EndsWith(".wav"))
-                .Select(x => processFileName(x)).Where(x => !String.IsNullOrEmpty(x)).ToArray();
-            return files;
         }
 
         private string processFileName(string file)
@@ -117,6 +112,14 @@ namespace SpeechRecognition.DataAccess
             else
                 return String.Empty;
         }
-        */
+
+        /*
+        public string[] getSongNames(string path)
+        {
+            string[] files = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories).Where(x => x.EndsWith(".mp3") || x.EndsWith(".wav"))
+                .Select(x => processFileName(x)).Where(x => !String.IsNullOrEmpty(x)).ToArray();
+            return files;
+        }
+        */                
     }
 }
